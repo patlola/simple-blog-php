@@ -1,6 +1,6 @@
 <?php
 include 'sql.php';
 $result = getPosts();
-include("blog_template.php");
+include("template/blog_template.php");
 
 ?> 

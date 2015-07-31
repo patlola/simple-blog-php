@@ -20,7 +20,7 @@ function dbConnect()
 function getPosts()
 {
 	$connection = dbConnect();
-	$sql = "SELECT * FROM blog_posts";
+	$sql = "SELECT * FROM blog_posts ORDER BY data DESC";
 	$result = $connection->query($sql);
 	return $result;
 }
@@ -38,7 +38,7 @@ function insertUpdatedRow($id, $title, $body)
 	$connection = dbConnect();
 	$sql = "UPDATE blog_posts SET post_title = '$title', post_body = '$body' WHERE id = $id";
 	$result = $connection->query($sql);
-	header("Location: myblog.php");
+	header("Location: /blog/myblog.php");
 
 	
 }
@@ -48,7 +48,7 @@ function insertNewRow($blog_title, $post_body, $author)
 	$connection = dbConnect();
 	$sql = "INSERT INTO blog_posts (post_title,post_body,author) VALUES ('$blog_title','$post_body','$author')";
 	$result = $connection->query($sql);
-	header("Location: myblog.php");
+	header("Location: /blog/myblog.php");
 }
 
 function delete($id)
@@ -56,7 +56,7 @@ function delete($id)
 	$connection = dbConnect();
 	$sql = "DELETE FROM blog_posts WHERE id = $id";
 	$result = $connection->query($sql);
-	header("Location: myblog.php");
+	header("Location: /blog/myblog.php");
 }
 
 ?>

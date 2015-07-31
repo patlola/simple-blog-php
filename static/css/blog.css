@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Tech Company</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <style>
-        .header-inner{
+.header-inner{
             margin-left: auto;
             margin-right: auto;
             position: relative;border-bottom-left-radius: 2em;
@@ -48,6 +42,14 @@
             color: #9E474B;
             font-size: 10px;
         }
+        #blog-post-list {
+            border: 2px solid green;
+            border-top-right-radius: 2em;
+            border-bottom-right-radius: 2em;
+            border-top-left-radius: 2em;
+            border-bottom-left-radius: 2em;
+
+        }
         .blog-post-title {
             font-family: 'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace;
             font-weight: 500;
@@ -64,27 +66,3 @@
             margin-top: 20px;
             margin-bottom: 0px;
         }
-    </style>
-</head>
-
-<body>
-    <div class = "header-inner">
-        <div class = "blog-title"> <h2> Tech Company </h2> </div>
-        <div class="blog-desc"> <h6> Tech Blog </h6> </div>
-    </div>
-    <br><br>
-    <div class = "blog-posts">
-        <h3 style="text-align:center"> New Blog Post.. </h3>
-          <form method="post" action="updatedeletepost.php">
-            <h4>Post Title :
-               <textarea name = "blog_title" rows="1" cols="50" class = "blog-post-title"></textarea></h4>
-               <div class="blog-post-details">
-               <h5> Author : 
-                <input type="text" name = "author" class = "author"></input><br></h5>
-                <h5> Description : <br><textarea type="text" rows="10" cols="50" name = "post_body" class = "post-body"></textarea></h5><br>
-            </div>
-            <input type="submit" name = "action" value="Post It"/>
-        </form>
-</div>
-</body>
-</html>

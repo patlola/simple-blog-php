@@ -1,17 +1,18 @@
 <?php
 	
-	include 'sql.php';
+	include dirname(__DIR__)."/sql.php";
+	
 	if(isset($_POST['action'])) {
 		switch ($_POST['action']) {
 			case 'Update':
 				$data = getRowByID($_POST['id']);
-				include "updateblog_template.php";
+				include dirname(__DIR__)."/template/updateblog_template.php";
 				break;
 			
 			case 'Delete':
 				delete($_POST['id']);
 				break;
-			case 'UpdateSql':
+			case 'UpdatePost':
 				$blog_title = $_POST['blog_title'];
 				$post_body = $_POST['post_body'];
 				$id = $_POST['id'];
